@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "professionnals",
+  "info": {
+    "singularName": "professionnal",
+    "pluralName": "professionnals",
+    "displayName": "professionnals"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "password": {
+      "type": "password"
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "places_id": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::place.place",
+      "mappedBy": "professionnal_id"
+    }
+  }
+}

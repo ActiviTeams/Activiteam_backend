@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "opening_day_slots",
+  "info": {
+    "singularName": "opening-day-slot",
+    "pluralName": "opening-day-slots",
+    "displayName": "opening_day_slot",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hour_start": {
+      "type": "integer"
+    },
+    "duration": {
+      "type": "integer"
+    },
+    "opening_day_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::opening-day.opening-day",
+      "inversedBy": "opening_day_slots_id"
+    }
+  }
+}

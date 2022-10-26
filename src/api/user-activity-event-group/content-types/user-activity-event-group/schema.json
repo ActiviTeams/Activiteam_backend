@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_activity_event_groups",
+  "info": {
+    "singularName": "user-activity-event-group",
+    "pluralName": "user-activity-event-groups",
+    "displayName": "user_activity_event_groups",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "admin": {
+      "type": "boolean"
+    },
+    "activity_event_group_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::activity-event-group.activity-event-group",
+      "inversedBy": "activity_event_ids"
+    },
+    "user_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "user_activity_event_group_id"
+    }
+  }
+}
