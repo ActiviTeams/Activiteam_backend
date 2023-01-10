@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "place_photos",
+  "info": {
+    "singularName": "place-photo",
+    "pluralName": "place-photos",
+    "displayName": "place_photos"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "place": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::place.place"
+    },
+    "url": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "cover": {
+      "type": "boolean"
+    }
+  }
+}

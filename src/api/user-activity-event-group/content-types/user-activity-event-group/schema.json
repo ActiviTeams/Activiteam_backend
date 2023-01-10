@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_activity_event_groups",
+  "info": {
+    "singularName": "user-activity-event-group",
+    "pluralName": "user-activity-event-groups",
+    "displayName": "user_activity_event_groups"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "activity_event_group": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::user-event-group.user-event-group"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "admin": {
+      "type": "boolean"
+    },
+    "messages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::message.message",
+      "mappedBy": "user_activity_event_group"
+    }
+  }
+}

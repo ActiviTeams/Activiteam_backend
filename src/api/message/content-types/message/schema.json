@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "messages",
+  "info": {
+    "singularName": "message",
+    "pluralName": "messages",
+    "displayName": "message",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "datetime"
+    },
+    "content": {
+      "type": "text"
+    },
+    "user_activity_event_group": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user-activity-event-group.user-activity-event-group",
+      "inversedBy": "messages"
+    }
+  }
+}

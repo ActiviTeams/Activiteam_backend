@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_event_groups",
+  "info": {
+    "singularName": "user-event-group",
+    "pluralName": "user-event-groups",
+    "displayName": "activity_event_groups",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "activity_event": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::activity-event.activity-event"
+    },
+    "name": {
+      "type": "string",
+      "maxLength": 255,
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activity_events",
+  "info": {
+    "singularName": "activity-event",
+    "pluralName": "activity-events",
+    "displayName": "activity_events",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "datetime_start": {
+      "type": "datetime"
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "BEGINNER",
+        "INTERMEDIATE",
+        "EXPERT"
+      ],
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "WAITING_GROUP",
+        "WAITING_PLACE",
+        "VALIDATED",
+        "REFUSED",
+        "PAYMENT_PENDING",
+        "FINISH"
+      ],
+      "required": false
+    },
+    "user_creator": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}
