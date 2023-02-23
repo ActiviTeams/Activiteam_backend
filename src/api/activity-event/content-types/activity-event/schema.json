@@ -40,6 +40,14 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user"
+    },
+    "activity_event_template": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::activity-event-template.activity-event-template"
+    },
+    "comment": {
+      "type": "text"
     }
   }
 }
